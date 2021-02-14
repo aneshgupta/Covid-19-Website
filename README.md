@@ -1,5 +1,6 @@
 # To run the Project
   Download the project .zip file in your system then open terminal and navigate to that folder.
+  
   In the project directory, you can run:
 
 ### `npm install`
