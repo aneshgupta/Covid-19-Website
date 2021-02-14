@@ -49,7 +49,6 @@ const HospitalBeds = function () {
             </tbody>
           </Table>
         ) : (
-          // <Spinner animation="grow" variant="dark" />
           <Image src={loading} fluid />
         )}
       </center>

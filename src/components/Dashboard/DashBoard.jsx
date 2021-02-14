@@ -20,7 +20,6 @@ const DashBoard = function () {
 
   if (summary) {
     length = summary.length;
-    console.log(summary[length - 1]);
   }
   return (
     <div>

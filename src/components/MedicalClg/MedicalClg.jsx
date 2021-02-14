@@ -36,7 +36,7 @@ const MedicalClg = function () {
             <tbody>
               {medicalData.map((data) => {
                 return (
-                  <tr key={data.state}>
+                  <tr key={data.city}>
                     <td>{data.state}</td>
                     <td>{data.name}</td>
                     <td>{data.city}</td>
