@@ -24,13 +24,15 @@ const HospitalBeds = function () {
         {hospitalData ? (
           <Table striped bordered hover>
             <thead>
-              <th>State Name</th>
-              <th>Rural Hospitals</th>
-              <th>Rural Beds</th>
-              <th>Urban Hospitals</th>
-              <th>Urban Beds</th>
-              <th>Total Hospitals</th>
-              <th>Total Beds (State Wise)</th>
+              <tr>
+                <th>State Name</th>
+                <th>Rural Hospitals</th>
+                <th>Rural Beds</th>
+                <th>Urban Hospitals</th>
+                <th>Urban Beds</th>
+                <th>Total Hospitals</th>
+                <th>Total Beds (State Wise)</th>
+              </tr>
             </thead>
             <tbody>
               {hospitalData.map((data) => {

@@ -26,8 +26,10 @@ const Contact = function () {
         {contact != null ? (
           <Table striped bordered hover>
             <thead>
-              <th>State Name</th>
-              <th>Helpline Number</th>
+              <tr>
+                <th>State Name</th>
+                <th>Helpline Number</th>
+              </tr>
             </thead>
             <tbody>
               {contact.map((data) => {

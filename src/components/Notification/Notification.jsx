@@ -10,7 +10,6 @@ const Notification = function () {
     axios
       .get("https://api.rootnet.in/covid19-in/notifications")
       .then(({ data: jsonData }) => {
-        console.log(jsonData.data.notifications);
         setNotification(jsonData.data.notifications);
       })
       .catch((err) => {
@@ -26,14 +25,16 @@ const Notification = function () {
         {notification ? (
           <Table striped bordered hover responsive>
             <thead>
-              <th>Date</th>
-              <th>Notification Title</th>
-              <th>Link</th>
+              <tr>
+                <th>Date</th>
+                <th>Notification Title</th>
+                <th>Link</th>
+              </tr>
             </thead>
             <tbody>
-              {notification.map((data) => {
+              {notification.map((data, i) => {
                 return (
-                  <tr key={data.title.slice(0, 11)}>
+                  <tr key={i}>
                     <td>{data.title.slice(0, 11)}</td>
                     <td>{data.title.slice(11)}</td>
                     <td>
@@ -41,6 +42,7 @@ const Notification = function () {
                     </td>
                   </tr>
                 );
+                i++;
               })}
             </tbody>
           </Table>

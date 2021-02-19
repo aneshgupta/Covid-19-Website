@@ -26,17 +26,19 @@ const MedicalClg = function () {
         {medicalData ? (
           <Table striped bordered hover id="myTable">
             <thead>
-              <th>State Name</th>
-              <th>Institute Name</th>
-              <th>City</th>
-              <th>Type</th>
-              <th>Admission Capacity</th>
-              <th>Hospital Beds</th>
+              <tr>
+                <th>State Name</th>
+                <th>Institute Name</th>
+                <th>City</th>
+                <th>Type</th>
+                <th>Admission Capacity</th>
+                <th>Hospital Beds</th>
+              </tr>
             </thead>
             <tbody>
-              {medicalData.map((data) => {
+              {medicalData.map((data, i) => {
                 return (
-                  <tr key={data.city}>
+                  <tr key={i}>
                     <td>{data.state}</td>
                     <td>{data.name}</td>
                     <td>{data.city}</td>
@@ -45,6 +47,7 @@ const MedicalClg = function () {
                     <td>{data.hospitalBeds}</td>
                   </tr>
                 );
+                i++;
               })}
             </tbody>
           </Table>
